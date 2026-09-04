@@ -127,6 +127,7 @@
             gap: 10px;
             font-size: 1.15rem;
             font-weight: 700;
+            text-decoration: none;
         }
 
         .brand svg {
@@ -382,11 +383,20 @@
             border-radius: 14px;
             overflow: hidden;
         }
+        
 
         .product-card figure {
             margin: 0;
-            aspect-ratio: 4/3;
-            background: var(--bg);
+            width: 100%;
+            height: 225px;
+            overflow: hidden;
+        }
+
+        .product-card figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .product-card .pad {
@@ -759,6 +769,13 @@
                 border-bottom: none;
             }
         }
+        .brand img.logo-mark {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
     </style>
 </head>
 
@@ -767,11 +784,9 @@
     <header class="site-nav">
         <div class="nav-inner">
             <a href="#beranda" class="brand">
-                <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <rect width="40" height="40" rx="10" fill="#0F2942" />
-                    <path d="M13 10v20M13 20l10-10M13 20l10 10" stroke="#F2A65A" stroke-width="3" stroke-linecap="round"
-                        stroke-linejoin="round" fill="none" />
-                </svg>
+                <img class="logo-mark"
+                    src="https://images.unsplash.com/vector-1777336971484-ac9da9a9b837?w=100&h=100&fit=crop&q=80&auto=format"
+                    alt="Logo Kirana Teknologi" />
                 Kirana Teknologi
             </a>
             <nav class="links" aria-label="Navigasi utama">
@@ -779,7 +794,6 @@
                 <a href="#layanan">Layanan</a>
                 <a href="#keunggulan">Keunggulan</a>
                 <a href="#produk">Produk</a>
-                <a href="#kontak">Kontak</a>
             </nav>
             <a href="#kontak" class="nav-cta">Konsultasi Gratis</a>
             <button class="menu-toggle" aria-label="Buka menu"
@@ -824,36 +838,29 @@
         <!-- ================= KEUNGGULAN ================= -->
         <section id="keunggulan" class="features">
             <div class="wrap">
-                <p class="eyebrow">Kenapa Kirana Teknologi</p>
                 <h2>Keunggulan kami</h2>
                 <ul class="feature-grid">
                     <li class="feature-card">
-                        <div class="icon">⚡</div>
                         <h3>Pengerjaan Cepat</h3>
                         <p>Metode kerja iteratif membuat progres proyek terlihat setiap minggu, bukan di akhir saja.</p>
                     </li>
                     <li class="feature-card">
-                        <div class="icon">🔒</div>
                         <h3>Keamanan Terjamin</h3>
                         <p>Standar keamanan data diterapkan sejak tahap desain sistem, bukan tambahan di akhir.</p>
                     </li>
                     <li class="feature-card">
-                        <div class="icon">🎯</div>
                         <h3>Desain Berorientasi Pengguna</h3>
                         <p>Setiap antarmuka diuji langsung ke calon pengguna sebelum masuk tahap pengembangan.</p>
                     </li>
                     <li class="feature-card">
-                        <div class="icon">🛠️</div>
                         <h3>Dukungan Purnajual</h3>
                         <p>Tim kami tetap mendampingi setelah peluncuran, termasuk pemeliharaan dan pembaruan rutin.</p>
                     </li>
                     <li class="feature-card">
-                        <div class="icon">💬</div>
                         <h3>Komunikasi Transparan</h3>
                         <p>Laporan progres berkala dan akses langsung ke tim pengembang sepanjang proyek berjalan.</p>
                     </li>
                     <li class="feature-card">
-                        <div class="icon">📈</div>
                         <h3>Siap Berkembang</h3>
                         <p>Arsitektur sistem dirancang agar mudah diskalakan seiring pertumbuhan bisnis Anda.</p>
                     </li>
@@ -864,69 +871,63 @@
         <!-- ================= PRODUK / JASA ================= -->
         <section id="produk">
             <div class="wrap">
-                <p class="eyebrow">Produk & Jasa</p>
                 <h2>Apa yang kami kerjakan</h2>
                 <p>Tiga lini layanan utama yang paling banyak dipercayakan klien kepada kami.</p>
                 <div class="products-grid">
+
+                    <!-- Pengembangan Website -->
                     <article class="product-card">
                         <figure>
-                            <svg viewBox="0 0 300 225" xmlns="http://www.w3.org/2000/svg" role="img"
-                                aria-label="Ilustrasi jasa pengembangan website">
-                                <rect width="300" height="225" fill="#0F2942" />
-                                <rect x="30" y="40" width="240" height="150" rx="10" fill="#fff" />
-                                <rect x="30" y="40" width="240" height="26" rx="10" fill="hsl(178,80%,22%)" />
-                                <circle cx="46" cy="53" r="4" fill="#F2A65A" />
-                                <rect x="46" y="86" width="80" height="80" rx="6" fill="#EDE9DD" />
-                                <rect x="140" y="86" width="100" height="10" rx="5" fill="#0F2942" />
-                                <rect x="140" y="104" width="100" height="7" rx="3.5" fill="#B9C2CC" />
-                                <rect x="140" y="118" width="80" height="7" rx="3.5" fill="#B9C2CC" />
-                                <rect x="140" y="140" width="60" height="18" rx="6" fill="#F2A65A" />
-                            </svg>
+                            <img src="https://images.unsplash.com/photo-1778146476147-5f8d4bd03c79?auto=format&fit=crop&w=900&q=80"
+                                alt="Pengembangan Website"
+                                loading="lazy">
                         </figure>
+
                         <div class="pad">
                             <h3>Pengembangan Website</h3>
-                            <p>Website company profile, e-commerce, hingga aplikasi web kustom dengan performa dan SEO
-                                yang baik.</p>
+                            <p>
+                                Website company profile, e-commerce, hingga aplikasi web kustom
+                                dengan performa dan SEO yang baik.
+                            </p>
                         </div>
                     </article>
+
+
+                    <!-- Aplikasi Mobile -->
                     <article class="product-card">
                         <figure>
-                            <svg viewBox="0 0 300 225" xmlns="http://www.w3.org/2000/svg" role="img"
-                                aria-label="Ilustrasi jasa pengembangan aplikasi mobile">
-                                <rect width="300" height="225" fill="#0E7C7B" />
-                                <rect x="112" y="34" width="76" height="158" rx="14" fill="#fff" />
-                                <rect x="122" y="52" width="56" height="100" rx="4" fill="#EDE9DD" />
-                                <circle cx="150" cy="168" r="6" fill="#0F2942" />
-                                <rect x="130" y="66" width="36" height="10" rx="5" fill="#F2A65A" />
-                                <rect x="130" y="84" width="36" height="26" rx="4" fill="#0F2942" />
-                                <rect x="130" y="118" width="36" height="6" rx="3" fill="#B9C2CC" />
-                                <rect x="130" y="130" width="24" height="6" rx="3" fill="#B9C2CC" />
-                            </svg>
+                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=900&q=80"
+                                alt="Pengembangan Aplikasi Mobile"
+                                loading="lazy">
                         </figure>
+
                         <div class="pad">
                             <h3>Aplikasi Mobile</h3>
-                            <p>Aplikasi Android & iOS yang terhubung langsung dengan sistem backend dan dashboard admin
-                                Anda.</p>
+                            <p>
+                                Aplikasi Android & iOS yang terhubung langsung dengan sistem
+                                backend dan dashboard admin Anda.
+                            </p>
                         </div>
                     </article>
+
+
+                    <!-- Cloud & Infrastruktur -->
                     <article class="product-card">
                         <figure>
-                            <svg viewBox="0 0 300 225" xmlns="http://www.w3.org/2000/svg" role="img"
-                                aria-label="Ilustrasi jasa solusi cloud">
-                                <rect width="300" height="225" fill="#F2A65A" />
-                                <ellipse cx="150" cy="130" rx="90" ry="46" fill="#fff" />
-                                <ellipse cx="105" cy="118" rx="46" ry="30" fill="#fff" />
-                                <ellipse cx="195" cy="118" rx="46" ry="30" fill="#fff" />
-                                <path d="M150 70v40M150 110l-16-16M150 110l16-16" stroke="#0F2942" stroke-width="4"
-                                    stroke-linecap="round" stroke-linejoin="round" fill="none" />
-                            </svg>
+                            <img src="https://images.unsplash.com/photo-1506399558188-acca6f8cbf41?auto=format&fit=crop&w=900&q=80"
+                                alt="Solusi Cloud dan Infrastruktur"
+                                loading="lazy">
                         </figure>
+
                         <div class="pad">
                             <h3>Solusi Cloud & Infrastruktur</h3>
-                            <p>Migrasi server, hosting, dan pemantauan sistem 24/7 agar layanan digital Anda selalu
-                                tersedia.</p>
+                            <p>
+                                Migrasi server, hosting, dan pemantauan sistem 24/7 agar layanan
+                                digital Anda selalu tersedia.
+                            </p>
                         </div>
                     </article>
+
                 </div>
             </div>
         </section>
@@ -1041,11 +1042,9 @@
             <div class="footer-top">
                 <div>
                     <div class="brand" style="color:#fff;">
-                        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <rect width="40" height="40" rx="10" fill="#F2A65A" />
-                            <path d="M13 10v20M13 20l10-10M13 20l10 10" stroke="#0F2942" stroke-width="3"
-                                stroke-linecap="round" stroke-linejoin="round" fill="none" />
-                        </svg>
+                        <img class="logo-mark"
+                            src="https://images.unsplash.com/vector-1777336971484-ac9da9a9b837?w=100&h=100&fit=crop&q=80&auto=format"
+                            alt="Logo Kirana Teknologi" />
                         Kirana Teknologi
                     </div>
                     <p style="color:rgba(255,255,255,.6);font-size:.88rem;margin-top:12px;">Mitra digital untuk website,
